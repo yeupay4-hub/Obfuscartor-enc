@@ -166,57 +166,60 @@ The original source code never appears in plain text.
 
 ##🔁 Control Flow Overview
 main()
- │
- 
- ├── Parse AST
- 
- │
- 
- ├── fstring() transformation
- 
- │
- 
- ├── hide() builtins transformation
- │
- 
- ├── obfstring() (string + integer obfuscation)
- 
- │
- 
- ├── speed() (Unicode string encoding v2)
- │
- 
- ├── junk() inject control flow distortion
- 
- │
- 
- ├── compile()
- 
- │
- 
- ├── marshal.dumps()
- 
- │
- 
- ├── encode() → Unicode mapping
- 
- │
- 
- └── sanh() → Build runtime loader
- 
-         │
-         
-         ├── Version check
-         
-         ├── Anti-hook verification
-         
-         ├── Anti-tamper validation
-         
-         ├── Unicode decode
-         
-         ├── marshal.loads
-         
-         └── exec
+
+    │
+    
+    ├── Parse AST
+    
+    │
+    
+    ├── fstring() transformation
+    
+    │
+    
+    ├── hide() builtins transformation
+    
+    │
+    
+    ├── obfstring() (string + integer obfuscation)
+    
+    │
+    
+    ├── speed() (Unicode string encoding v2)
+    
+    │
+    
+    ├── junk() inject control flow distortion
+    
+    │
+    
+    ├── compile()
+    
+    │
+    
+    ├── marshal.dumps()
+    
+    │
+    
+    ├── encode() → Unicode mapping
+    
+    │
+    
+    └── sanh() → Build runtime loader
+    
+            │
+            
+            ├── Version check
+            
+            ├── Anti-hook verification
+            
+            ├── Anti-tamper validation
+            
+            ├── Unicode decode
+            
+            ├── marshal.loads
+            
+            └── exec
 ## 🛡️ Protection Layers Summary
 Layer	Purpose
 AST Layer	Structural transformation
